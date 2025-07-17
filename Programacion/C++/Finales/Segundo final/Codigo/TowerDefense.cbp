@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="TowerDefense" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/TowerDefense" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+					<Add directory="F:/Otros/Facu/Programacion/SFML-2.5.1/include" />
+				</Compiler>
+				<Linker>
+					<Add directory="F:/Otros/Facu/Programacion/SFML-2.5.1/lib" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/TowerDefense" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="include/Boton.h" />
+		<Unit filename="include/Canion.h" />
+		<Unit filename="include/CasillaPth.h" />
+		<Unit filename="include/CasillaTrt.h" />
+		<Unit filename="include/Enemigo.h" />
+		<Unit filename="include/Torreta.h" />
+		<Unit filename="include/casilla.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/Boton.cpp" />
+		<Unit filename="src/Canion.cpp" />
+		<Unit filename="src/CasillaPth.cpp" />
+		<Unit filename="src/CasillaTrt.cpp" />
+		<Unit filename="src/Enemigo.cpp" />
+		<Unit filename="src/Torreta.cpp" />
+		<Unit filename="src/casilla.cpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

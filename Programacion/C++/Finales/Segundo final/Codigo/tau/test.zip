@@ -1,0 +1,160 @@
+TEST(Parcial2, Camion)
+{
+    Camion cam1("ca123on", 100);
+
+    CHECK(cam1.getKilometraje()==0);
+    CHECK(cam1.getPatente()=="ca123on");
+    CHECK(cam1.getCostoKilometro()==100);
+    CHECK(cam1.calcularCosto()==0);
+
+    cam1.setKilometraje(15829);
+    CHECK(cam1.getKilometraje()==15829);
+    CHECK(cam1.calcularCosto()==1582900);
+
+    cam1.setCostoKilometro(200);
+    CHECK(cam1.getCostoKilometro()==200);
+    CHECK(cam1.calcularCosto()==3165800);
+
+    try
+    {
+        cam1.setCostoKilometro(-212.20);
+        CHECK(1==0, "No lanza excepción al asignar costo negativo");
+    }
+    catch(const char * x)
+    {
+        CHECK(1);
+    }
+
+    try
+    {
+        cam1.setKilometraje(-212.20);
+        CHECK(1==0, "No lanza excepción al asignar kilometraje negativo");
+    }
+    catch(const char * x)
+    {
+        CHECK(1);
+    }
+}
+
+
+TEST(Parcial2, Camioneta)
+{
+    Camioneta cmt1 ("ca001ta", 12300);
+
+    CHECK(cmt1.getKilometraje()==0);
+    CHECK(cmt1.getPatente()=="ca001ta");
+    CHECK(cmt1.getCostoService10K()==12300);
+    CHECK(cmt1.calcularCosto()==0);
+
+    cmt1.setKilometraje(15829);
+    CHECK(cmt1.getKilometraje()==15829);
+    CHECK(cmt1.calcularCosto()==12300);
+
+    cmt1.setKilometraje(29988);
+    cmt1.setCostoService10K(20000);
+    CHECK(cmt1.getCostoService10K()==20000);
+    CHECK(cmt1.calcularCosto()==40000);
+
+    try
+    {
+        cmt1.setCostoService10K(-212.20);
+        CHECK(1==0, "No lanza excepción al asignar costo negativo");
+    }
+    catch(const char * x)
+    {
+        CHECK(1);
+    }
+
+    try
+    {
+        cmt1.setKilometraje(-212.20);
+        CHECK(1==0, "No lanza excepción al asignar kilometraje negativo");
+    }
+    catch(const char * x)
+    {
+        CHECK(1);
+    }
+}
+
+TEST(Parcial2, Logistica)
+{
+    Logistica lg;
+    Camioneta cmt1 ("ca001ta", 12300);
+    Camioneta cmt2 ("ca002ta", 13500);
+    Camion cam1("ca123on", 100);
+    Camion cam2("ca321on", 120);
+
+    CHECK(lg.calcularCostoTotal()==0);
+    CHECK(lg.estaVehiculo(cmt1)==false);
+    CHECK(lg.estaVehiculo(cmt2)==false);
+    CHECK(lg.estaVehiculo(cam1)==false);
+    CHECK(lg.estaVehiculo(cam2)==false);
+
+    lg.agregarVehiculo(cmt1);
+    CHECK(lg.estaVehiculo(cmt1)==true);
+    CHECK(lg.calcularCostoTotal()==0);
+    cmt1.setKilometraje(15829);
+    CHECK(lg.calcularCostoTotal()==12300);
+
+    lg.agregarVehiculo(cmt1);
+    CHECK(lg.estaVehiculo(cmt1)==true);
+    CHECK(lg.calcularCostoTotal()==12300, "El costo debería mantenerse porque se intentó agregar una camioneta repetida");
+
+    lg.agregarVehiculo(cmt2);
+    CHECK(lg.estaVehiculo(cmt2)==true);
+    CHECK(lg.calcularCostoTotal()==12300);
+    cmt2.setKilometraje(8700);
+    CHECK(lg.calcularCostoTotal()==12300);
+    cmt2.setKilometraje(28700);
+    CHECK(lg.calcularCostoTotal()==39300);
+
+    try
+    {
+        lg.eliminarVehiculo(cam1);
+        CHECK(1==0, "Debería tirar excepción al intentar borrar un inexistente");
+    }
+    catch(const char * x)
+    {
+        CHECK(1);
+    }
+
+    CHECK(lg.estaVehiculo(cam1)==false);
+    lg.agregarVehiculo(cam1);
+    CHECK(lg.estaVehiculo(cam1)==true);
+    CHECK(lg.calcularCostoTotal()==39300);
+    cam1.setKilometraje(607);
+    CHECK(lg.calcularCostoTotal()==100000);
+    cam1.setKilometraje(1607);
+    CHECK(lg.calcularCostoTotal()==200000);
+    lg.eliminarVehiculo(cam1);
+    CHECK(lg.calcularCostoTotal()==39300);
+
+    lg.eliminarVehiculo(cmt1);
+    lg.eliminarVehiculo(cmt2);
+    CHECK(lg.calcularCostoTotal()==0);
+    CHECK(lg.estaVehiculo(cmt1)==false);
+    CHECK(lg.estaVehiculo(cmt2)==false);
+    CHECK(lg.estaVehiculo(cam1)==false);
+    CHECK(lg.estaVehiculo(cam2)==false);
+}
+
+
+TEST(Parcial2, Recursividad)
+{
+    int t1[] = {1,2,3,4,5,6,7,8,9,0};
+    int t2[] = {1,2,2,2,5,6,7,9,9,0};
+    int t3[] = {1,0};
+    int t4[] = {1,10,0};
+    int t5[] = {1,1,1,1,1,0};
+    int f1[] = {10,2,3,4,5,6,7,8,9,0};
+    int f2[] = {0};
+    int f3[] = {9,8,7,6,6,0};
+    CHECK(esta_ordenado_creciente(t1));
+    CHECK(esta_ordenado_creciente(t2));
+    CHECK(esta_ordenado_creciente(t3));
+    CHECK(esta_ordenado_creciente(t4));
+    CHECK(esta_ordenado_creciente(t5));
+    CHECK(esta_ordenado_creciente(f1)==false);
+    CHECK(esta_ordenado_creciente(f2)==false);
+    CHECK(esta_ordenado_creciente(f3)==false);
+}
