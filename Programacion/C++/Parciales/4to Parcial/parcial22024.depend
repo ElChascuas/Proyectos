@@ -1,0 +1,66 @@
+# depslib dependency file v1.0
+1732046007 source:c:\users\presentacion\desktop\parcial22024\main.cpp
+	"tau/tau.h"
+	"Item.h"
+	"Producto.h"
+	"Combo.h"
+
+1653414212 c:\users\presentacion\desktop\parcial22024\tau\tau.h
+	<tau/types.h>
+	<tau/misc.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdarg.h>
+	<errno.h>
+	<libgen.h>
+	<unistd.h>
+	<sys/types.h>
+	<sys/wait.h>
+	<signal.h>
+	<time.h>
+	<fcntl.h>
+	<sys/stat.h>
+	<Windows.h>
+	<io.h>
+	<valgrind.h>
+	<exception>
+	<limits.h>
+	<time.h>
+	<sys/syscall.h>
+	<unistd.h>
+	<time.h>
+	<mach/mach_time.h>
+
+1653414212 c:\users\presentacion\desktop\parcial22024\tau\types.h
+	<tau/compilers.h>
+	<cstdint>
+	<stdint.h>
+
+1653414212 c:\users\presentacion\desktop\parcial22024\tau\compilers.h
+
+1653414212 c:\users\presentacion\desktop\parcial22024\tau\misc.h
+	<inttypes.h>
+
+1732041407 c:\users\presentacion\desktop\parcial22024\include\item.h
+	<string>
+
+1732041437 c:\users\presentacion\desktop\parcial22024\include\producto.h
+	"Item.h"
+	<string>
+
+1732046223 c:\users\presentacion\desktop\parcial22024\include\combo.h
+	"Item.h"
+	<string>
+	<list>
+
+1732046023 source:c:\users\presentacion\desktop\parcial22024\src\item.cpp
+	"Item.h"
+
+1732054117 source:c:\users\presentacion\desktop\parcial22024\src\producto.cpp
+	"Producto.h"
+
+1732055055 source:c:\users\presentacion\desktop\parcial22024\src\combo.cpp
+	"Combo.h"
+	<stdexcept>
+

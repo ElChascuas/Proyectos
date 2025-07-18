@@ -8,8 +8,8 @@ APELLIDO Y NOMBRE: FERNANDEZ, THOMAS URIEL
 
 **/
 /**
-Realizar un programa en el que el usuario ingrese el tamaño de una figura (número entero positivo).
-A continuación deberá dibujarse con asteriscos una figura de base y altura igual al tamaño ingresado,
+Realizar un programa en el que el usuario ingrese el tamaï¿½o de una figura (nï¿½mero entero positivo).
+A continuaciï¿½n deberï¿½ dibujarse con asteriscos una figura de base y altura igual al tamaï¿½o ingresado,
 de manera que la parte superior izquierda de la diagonal quede rellena y la parte inferior quede hueca
 (ver ejemplo para referencia).
 Por ejemplo:
@@ -30,7 +30,7 @@ int main()
 {
 	int i, j, escala;
 
-    cout << "Tamaño ";
+    cout << "Tamanio ";
     cin >> escala;
 
     for(i = 0; i < escala; i++)

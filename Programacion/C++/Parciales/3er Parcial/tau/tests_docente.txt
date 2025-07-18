@@ -1,0 +1,95 @@
+TEST(CorreccionParcialDocente, CorreccionActorDocente)
+{
+    Actor a ("Al Pacino");
+    CHECK(a.getNombre()=="Al Pacino", "Falla getNombre");
+    CHECK(a.getCantidadGalardones()==0, "Falla getCantidadGalardones 0");
+
+    a.agregarGalardon(OSCAR);
+    CHECK(a.getCantidadGalardones()==1);
+    a.agregarGalardon(OSCAR);
+    CHECK(a.getCantidadGalardones()==2, "Debería tener 2 galardones");
+    CHECK(a.contarGalardon(OSCAR)==2, "Debería tener 2 OSCAR");
+    CHECK(a.contarGalardon(GLOBO_ORO)==0, "Debería tener 0 GLOBO_ORO");
+    CHECK(a.contarGalardon(BAFTA)==0, "Debería tener 0 BAFTA");
+    CHECK(a.contarGalardon(SAG)==0, "Debería tener 0 SAG");
+    CHECK(a.contarGalardon(EMMY)==0, "Debería tener 0 EMMY");
+    CHECK(a.contarGalardon(OTRO)==0, "Debería tener 0 OTRO");
+    a.agregarGalardon(SAG);
+    CHECK(a.getCantidadGalardones()==3, "Debería tener 3 galardones");
+    CHECK(a.contarGalardon(SAG)==1, "Debería tener 1 SAG");
+
+    a.eliminarGalardon(OTRO);
+    CHECK(a.getCantidadGalardones()==3, "Falla al cantidad luego de eliminar galardon inexistente");
+    a.eliminarGalardon(OSCAR);
+    CHECK(a.getCantidadGalardones()==2, "Falla cantidad luego de eliminar galardon existente");
+    CHECK(a.contarGalardon(OSCAR)==1, "Falla al contar luego de eliminar galardon existente");
+
+    a.eliminarGalardon(OSCAR);
+    a.eliminarGalardon(SAG);
+    CHECK(a.getCantidadGalardones()==0, "Falla al cantidad luego de eliminar todo galardon existente");
+    a.eliminarGalardon(OSCAR);
+    a.eliminarGalardon(SAG);
+    CHECK(a.getCantidadGalardones()==0, "Falla al cantidad luego de eliminar galardones inexistentes");
+}
+
+
+TEST(CorreccionParcialDocente, CorreccionPeliculaDocente)
+{
+    Pelicula p("Volver al futuro", 1985);
+    CHECK(p.getTitulo()=="Volver al futuro", "Falla getTitulo");
+    CHECK(p.getAnioEstreno()==1985, "Falla getTAnioEstreno");
+    CHECK(p.cantidadElenco()==0, "Falla cantidadElenco al construir");
+    CHECK(p[0]==nullptr, "Falla operador [] recien construido");
+    CHECK(p[10]==nullptr, "Falla operador [] de posición inexistente");
+
+    Actor a1("Al Pacino");
+    Actor a2("Will Smith");
+    Actor a3("Ava Gardner");
+    Actor a4("Uma Thurman");
+    Actor a5("Ricardo Fort");
+
+    CHECK(p.actua(a1)==false, "Falla actua actor fuera del elenco");
+    CHECK(p.actua(a2)==false, "Falla actua actor fuera del elenco");
+    CHECK(p.actua(a5)==false, "Falla actua actor fuera del elenco");
+
+    CHECK(p.agregarActor(a1)==true, "Falla agregarActor nuevo");
+    CHECK(p.actua(a1)==true, "Falla actua actor del elenco");
+    CHECK(p.actua(a2)==false, "Falla actua actor fuera del elenco");
+    CHECK(p.cantidadElenco()==1, "Falla cantidadElenco al agregar");
+    CHECK(p[0]==&a1, "Falla operador []");
+
+    CHECK(p.agregarActor(a1)==false, "Falla agregarActor existente");
+    CHECK(p.cantidadElenco()==1, "Falla cantidadElenco al agregar repetido");
+
+    CHECK(p.agregarActor(a2)==true, "Falla agregarActor nuevo");
+    CHECK(p.actua(a2)==true, "Falla actua actor del elenco");
+    CHECK(p.cantidadElenco()==2, "Falla cantidadElenco al agregar nuevo");
+    CHECK(p.agregarActor(a3)==true, "Falla agregarActor nuevo");
+    CHECK(p.actua(a3)==true, "Falla actua actor del elenco");
+    CHECK(p.cantidadElenco()==3, "Falla cantidadElenco al agregar nuevo");
+
+    CHECK(p.eliminarActor(a4)==false, "Falla eliminarActor fuera del elenco");
+    CHECK(p.cantidadElenco()==3, "Falla cantidadElenco al eliminar inexistente");
+
+    CHECK(p.eliminarActor(a2)==true, "Falla eliminarActor del elenco");
+    CHECK(p.actua(a2)==false, "Falla actua actor eliminado del elenco");
+    CHECK(p.cantidadElenco()==2, "Falla cantidadElenco al eliminar existente");
+    CHECK(p.agregarActor(a2)==true, "Falla agregarActor nuevo");
+    CHECK(p.agregarActor(a2)==false, "Falla agregarActor repetido");
+    CHECK(p.actua(a2)==true, "Falla actua actor del elenco");
+    CHECK(p.eliminarActor(a2)==true, "Falla eliminarActor del elenco");
+    CHECK(p.actua(a2)==false, "Falla actua actor fuera del elenco");
+    CHECK(p.cantidadElenco()==2, "Falla cantidadElenco al eliminar/agregar/eliminar actor");
+    CHECK(p[10]==nullptr, "Falla operador [] de posición inexistente");
+
+    CHECK(p.actua(a1)==true, "Falla actua actor del elenco");
+    CHECK(p.actua(a2)==false, "Falla actua actor fuera del elenco");
+    CHECK(p.actua(a3)==true, "Falla actua actor del elenco");
+    CHECK(p.actua(a4)==false, "Falla actua actor fuera del elenco");
+    CHECK(p.actua(a5)==false, "Falla actua actor fuera del elenco");
+
+    CHECK(p.eliminarActor(a1)==true);
+    CHECK(p[0]==&a3, "Falla operador [] de posición existente");
+    CHECK(p.eliminarActor(a3)==true);
+    CHECK(p[0]==nullptr, "Falla operador [] de posición inexistente");
+}
