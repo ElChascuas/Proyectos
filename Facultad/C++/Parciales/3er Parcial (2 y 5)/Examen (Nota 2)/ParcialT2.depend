@@ -1,0 +1,112 @@
+# depslib dependency file v1.0
+1726007353 source:c:\users\presentacion\desktop\2024 - 2c - parcial 1 - tema 2\parcial1-2024-t2\src\corredor.cpp
+	"Corredor.h"
+
+1725996387 c:\users\presentacion\desktop\2024 - 2c - parcial 1 - tema 2\parcial1-2024-t2\include\corredor.h
+	<string>
+
+1726011622 source:c:\users\presentacion\desktop\2024 - 2c - parcial 1 - tema 2\parcial1-2024-t2\src\carrera.cpp
+	"Carrera.h"
+
+1726007448 c:\users\presentacion\desktop\2024 - 2c - parcial 1 - tema 2\parcial1-2024-t2\include\carrera.h
+	<string>
+	"Corredor.h"
+
+1726010747 source:c:\users\presentacion\desktop\2024 - 2c - parcial 1 - tema 2\parcial1-2024-t2\main.cpp
+	"tau/tau.h"
+	"Carrera.h"
+	"Corredor.h"
+
+1653414212 c:\users\presentacion\desktop\2024 - 2c - parcial 1 - tema 2\parcial1-2024-t2\tau\tau.h
+	<tau/types.h>
+	<tau/misc.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdarg.h>
+	<errno.h>
+	<libgen.h>
+	<unistd.h>
+	<sys/types.h>
+	<sys/wait.h>
+	<signal.h>
+	<time.h>
+	<fcntl.h>
+	<sys/stat.h>
+	<Windows.h>
+	<io.h>
+	<valgrind.h>
+	<exception>
+	<limits.h>
+	<time.h>
+	<sys/syscall.h>
+	<unistd.h>
+	<time.h>
+	<mach/mach_time.h>
+
+1653414212 c:\users\presentacion\desktop\2024 - 2c - parcial 1 - tema 2\parcial1-2024-t2\tau\types.h
+	<tau/compilers.h>
+	<cstdint>
+	<stdint.h>
+
+1653414212 c:\users\presentacion\desktop\2024 - 2c - parcial 1 - tema 2\parcial1-2024-t2\tau\compilers.h
+
+1653414212 c:\users\presentacion\desktop\2024 - 2c - parcial 1 - tema 2\parcial1-2024-t2\tau\misc.h
+	<inttypes.h>
+
+1753802002 source:c:\users\capitan_cp\desktop\proyectos\facultad\c++\parciales\3er parcial\main.cpp
+	"tau/tau.h"
+	<iostream>
+	"Carrera.h"
+	"Corredor.h"
+
+1752810685 c:\users\capitan_cp\desktop\proyectos\facultad\c++\parciales\3er parcial\tau\tau.h
+	<tau/types.h>
+	<tau/misc.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdarg.h>
+	<errno.h>
+	<libgen.h>
+	<unistd.h>
+	<sys/types.h>
+	<sys/wait.h>
+	<signal.h>
+	<time.h>
+	<fcntl.h>
+	<sys/stat.h>
+	<Windows.h>
+	<io.h>
+	<valgrind.h>
+	<exception>
+	<limits.h>
+	<time.h>
+	<sys/syscall.h>
+	<unistd.h>
+	<time.h>
+	<mach/mach_time.h>
+
+1752810685 c:\users\capitan_cp\desktop\proyectos\facultad\c++\parciales\3er parcial\tau\types.h
+	<tau/compilers.h>
+	<cstdint>
+	<stdint.h>
+
+1752810685 c:\users\capitan_cp\desktop\proyectos\facultad\c++\parciales\3er parcial\tau\compilers.h
+
+1752810685 c:\users\capitan_cp\desktop\proyectos\facultad\c++\parciales\3er parcial\tau\misc.h
+	<inttypes.h>
+
+1753802152 c:\users\capitan_cp\desktop\proyectos\facultad\c++\parciales\3er parcial\include\carrera.h
+	<string>
+	"Corredor.h"
+
+1752810685 c:\users\capitan_cp\desktop\proyectos\facultad\c++\parciales\3er parcial\include\corredor.h
+	<string>
+
+1752810685 source:c:\users\capitan_cp\desktop\proyectos\facultad\c++\parciales\3er parcial\src\corredor.cpp
+	"Corredor.h"
+
+1753800830 source:c:\users\capitan_cp\desktop\proyectos\facultad\c++\parciales\3er parcial\src\carrera.cpp
+	"Carrera.h"
+

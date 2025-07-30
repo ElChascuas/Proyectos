@@ -1,0 +1,180 @@
+# depslib dependency file v1.0
+1725995522 source:/home/santiago/Documentos/Codeblocks/_Programacion 2/Recuperatorio1-2024/main.cpp
+	"tau/tau.h"
+	"Carrera.h"
+	"Corredor.h"
+
+1653414212 /home/santiago/Documentos/Codeblocks/_Programacion 2/Recuperatorio1-2024/tau/tau.h
+	<tau/types.h>
+	<tau/misc.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdarg.h>
+	<errno.h>
+	<libgen.h>
+	<unistd.h>
+	<sys/types.h>
+	<sys/wait.h>
+	<signal.h>
+	<time.h>
+	<fcntl.h>
+	<sys/stat.h>
+	<Windows.h>
+	<io.h>
+	<valgrind.h>
+	<exception>
+	<limits.h>
+	<time.h>
+	<sys/syscall.h>
+	<unistd.h>
+	<time.h>
+	<mach/mach_time.h>
+
+1653414212 /home/santiago/Documentos/Codeblocks/_Programacion 2/Recuperatorio1-2024/tau/types.h
+	<tau/compilers.h>
+	<cstdint>
+	<stdint.h>
+
+1653414212 /home/santiago/Documentos/Codeblocks/_Programacion 2/Recuperatorio1-2024/tau/compilers.h
+
+1653414212 /home/santiago/Documentos/Codeblocks/_Programacion 2/Recuperatorio1-2024/tau/misc.h
+	<inttypes.h>
+
+1727135128 source:/home/santiago/Documentos/Codeblocks/_Programacion 2/Recuperatorio1-2024/src/Evento.cpp
+	"Evento.h"
+
+1727135076 /home/santiago/Documentos/Codeblocks/_Programacion 2/Recuperatorio1-2024/include/Evento.h
+	<string>
+	"rubro_t.h"
+	"Expositor.h"
+
+1727134666 /home/santiago/Documentos/Codeblocks/_Programacion 2/Recuperatorio1-2024/include/rubro_t.h
+
+1727134864 /home/santiago/Documentos/Codeblocks/_Programacion 2/Recuperatorio1-2024/include/Expositor.h
+	<string>
+	"rubro_t.h"
+
+1727134778 source:/home/santiago/Documentos/Codeblocks/_Programacion 2/Recuperatorio1-2024/src/Expositor.cpp
+	"Expositor.h"
+
+1727216863 source:c:\users\presentacion\desktop\recuperatorio1-2024\src\expositor.cpp
+	"Expositor.h"
+
+1727134864 c:\users\presentacion\desktop\recuperatorio1-2024\include\expositor.h
+	<string>
+	"rubro_t.h"
+
+1727134666 c:\users\presentacion\desktop\recuperatorio1-2024\include\rubro_t.h
+
+1727221887 source:c:\users\presentacion\desktop\recuperatorio1-2024\src\evento.cpp
+	"Evento.h"
+
+1727216501 c:\users\presentacion\desktop\recuperatorio1-2024\include\evento.h
+	<string>
+	"rubro_t.h"
+	"Expositor.h"
+
+1727221709 source:c:\users\presentacion\desktop\recuperatorio1-2024\main.cpp
+	"tau/tau.h"
+	<iostream>
+	"Evento.h"
+	"Expositor.h"
+
+1653414212 c:\users\presentacion\desktop\recuperatorio1-2024\tau\tau.h
+	<tau/types.h>
+	<tau/misc.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdarg.h>
+	<errno.h>
+	<libgen.h>
+	<unistd.h>
+	<sys/types.h>
+	<sys/wait.h>
+	<signal.h>
+	<time.h>
+	<fcntl.h>
+	<sys/stat.h>
+	<Windows.h>
+	<io.h>
+	<valgrind.h>
+	<exception>
+	<limits.h>
+	<time.h>
+	<sys/syscall.h>
+	<unistd.h>
+	<time.h>
+	<mach/mach_time.h>
+
+1653414212 c:\users\presentacion\desktop\recuperatorio1-2024\tau\types.h
+	<tau/compilers.h>
+	<cstdint>
+	<stdint.h>
+
+1653414212 c:\users\presentacion\desktop\recuperatorio1-2024\tau\compilers.h
+
+1653414212 c:\users\presentacion\desktop\recuperatorio1-2024\tau\misc.h
+	<inttypes.h>
+
+1753818593 source:c:\users\capitan_cp\desktop\proyectos\facultad\c++\parciales\3er parcial\recuperatorio (nota 8)\main.cpp
+	"tau/tau.h"
+	<iostream>
+	"Evento.h"
+	"Expositor.h"
+
+1753803259 c:\users\capitan_cp\desktop\proyectos\facultad\c++\parciales\3er parcial\recuperatorio (nota 8)\tau\tau.h
+	<tau/types.h>
+	<tau/misc.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdarg.h>
+	<errno.h>
+	<libgen.h>
+	<unistd.h>
+	<sys/types.h>
+	<sys/wait.h>
+	<signal.h>
+	<time.h>
+	<fcntl.h>
+	<sys/stat.h>
+	<Windows.h>
+	<io.h>
+	<valgrind.h>
+	<exception>
+	<limits.h>
+	<time.h>
+	<sys/syscall.h>
+	<unistd.h>
+	<time.h>
+	<mach/mach_time.h>
+
+1753803259 c:\users\capitan_cp\desktop\proyectos\facultad\c++\parciales\3er parcial\recuperatorio (nota 8)\tau\types.h
+	<tau/compilers.h>
+	<cstdint>
+	<stdint.h>
+
+1753803259 c:\users\capitan_cp\desktop\proyectos\facultad\c++\parciales\3er parcial\recuperatorio (nota 8)\tau\compilers.h
+
+1753803259 c:\users\capitan_cp\desktop\proyectos\facultad\c++\parciales\3er parcial\recuperatorio (nota 8)\tau\misc.h
+	<inttypes.h>
+
+1753803259 c:\users\capitan_cp\desktop\proyectos\facultad\c++\parciales\3er parcial\recuperatorio (nota 8)\include\evento.h
+	<string>
+	"rubro_t.h"
+	"Expositor.h"
+
+1753803259 c:\users\capitan_cp\desktop\proyectos\facultad\c++\parciales\3er parcial\recuperatorio (nota 8)\include\rubro_t.h
+
+1753803259 c:\users\capitan_cp\desktop\proyectos\facultad\c++\parciales\3er parcial\recuperatorio (nota 8)\include\expositor.h
+	<string>
+	"rubro_t.h"
+
+1753803259 source:c:\users\capitan_cp\desktop\proyectos\facultad\c++\parciales\3er parcial\recuperatorio (nota 8)\src\expositor.cpp
+	"Expositor.h"
+
+1753818451 source:c:\users\capitan_cp\desktop\proyectos\facultad\c++\parciales\3er parcial\recuperatorio (nota 8)\src\evento.cpp
+	"Evento.h"
+
